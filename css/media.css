@@ -1,0 +1,18 @@
+@media only screen and (max-width: 1440px) {
+	
+	.info {
+		height: 65vh;
+	}
+
+	.infotext {
+		font-size: 1.25rem;
+	}
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+	.infotext {
+		font-size: 1rem;
+	}
+}
