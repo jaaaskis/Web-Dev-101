@@ -30,7 +30,7 @@ function loadWeather() {
 		var jsonObj = JSON.parse(data);
 
 		console.log('Print location and temperature.');
-
+		
 		let title;
 		let temp;
 
