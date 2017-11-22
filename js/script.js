@@ -34,32 +34,36 @@ function loadWeather() {
 		let title;
 		let temp;
 
+		function roundTemp(kelvin) {
+			return Math.floor(kelvin - 273.15) + 'ºC';
+		}
+
 		if (jsonObj.sys.country === 'AR') {
 			title = document.getElementById('title1');
 			title.textContent = jsonObj.name;
 
 			temp = document.getElementById('temp1');
-			temp.textContent = Math.floor(jsonObj.main.temp - 273.15) + 'ºC';
+			temp.textContent = roundTemp(jsonObj.main.temp);
 
-			} else if (jsonObj.sys.country === 'VN') {
+		} else if (jsonObj.sys.country === 'VN') {
 			title = document.getElementById('title2');
 			title.textContent = jsonObj.name;
 
 			temp = document.getElementById('temp2');
-			temp.textContent = Math.floor(jsonObj.main.temp - 273.15) + 'ºC';
+			temp.textContent = roundTemp(jsonObj.main.temp);
 
-			} else if (jsonObj.sys.country === 'IT') {
+		} else if (jsonObj.sys.country === 'IT') {
 			title = document.getElementById('title3');
 			title.textContent = jsonObj.name;
 
 			temp = document.getElementById('temp3');
-			temp.textContent = Math.floor(jsonObj.main.temp - 273.15) + 'ºC';
-			} else {
+			temp.textContent = roundTemp(jsonObj.main.temp);
+		} else {
 			console.log('Loop don\'t work. Check the if loop.')
-			}
 		}
+	}
 
-		
+
 };
 
 loadWeather();
